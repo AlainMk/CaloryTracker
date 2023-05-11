@@ -3,7 +3,6 @@ package com.alainmk.calorytracker
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
 import androidx.compose.material.rememberScaffoldState
@@ -16,8 +15,10 @@ import androidx.navigation.compose.rememberNavController
 import com.alainmk.calorytracker.navigation.navigate
 import com.alainmk.calorytracker.ui.theme.CaloryTrackerTheme
 import com.alainmk.core.navigation.Route
+import com.alainmk.onboarding_presentation.activity.ActivityScreen
 import com.alainmk.onboarding_presentation.age.AgeScreen
 import com.alainmk.onboarding_presentation.gender.GenderScreen
+import com.alainmk.onboarding_presentation.goal.GoalScreen
 import com.alainmk.onboarding_presentation.height.HeightScreen
 import com.alainmk.onboarding_presentation.weight.WeightScreen
 import com.alainmk.onboarding_presentation.welcome.WelcomeScreen
@@ -67,10 +68,10 @@ class MainActivity : ComponentActivity() {
 
                         }
                         composable(Route.ACTIVITY) {
-
+                            ActivityScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.GOAL) {
-
+                            GoalScreen(onNavigate = navController::navigate)
                         }
 
                         composable(Route.TRACKER_OVERVIEW) {
