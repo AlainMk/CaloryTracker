@@ -18,6 +18,8 @@ import com.alainmk.calorytracker.ui.theme.CaloryTrackerTheme
 import com.alainmk.core.navigation.Route
 import com.alainmk.onboarding_presentation.age.AgeScreen
 import com.alainmk.onboarding_presentation.gender.GenderScreen
+import com.alainmk.onboarding_presentation.height.HeightScreen
+import com.alainmk.onboarding_presentation.weight.WeightScreen
 import com.alainmk.onboarding_presentation.welcome.WelcomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -50,10 +52,16 @@ class MainActivity : ComponentActivity() {
                             GenderScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.HEIGHT) {
-
+                            HeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.WEIGHT) {
-
+                            WeightScreen(
+                                scaffoldState = scaffoldState,
+                                onNavigate = navController::navigate
+                            )
                         }
                         composable(Route.NUTRIENT_GOAL) {
 
