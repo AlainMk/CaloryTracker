@@ -23,7 +23,7 @@ import com.alainmk.onboarding_presentation.height.HeightScreen
 import com.alainmk.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.alainmk.onboarding_presentation.weight.WeightScreen
 import com.alainmk.onboarding_presentation.welcome.WelcomeScreen
-import com.alainmk.tracker_presentation.tracker_overview.components.TrackerOverviewScreen
+import com.alainmk.tracker_presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
