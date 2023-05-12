@@ -1,4 +1,4 @@
-package com.alainmk.calorytracker.ui.theme
+package com.alainmk.core_ui
 
 import androidx.compose.ui.graphics.Color
 
