@@ -1,4 +1,4 @@
-package com.alainmk.core.navigation
+package com.alainmk.calorytracker.navigation
 
 object Route {
     const val WELCOME = "welcome"

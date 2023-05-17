@@ -6,7 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alainmk.core.domain.preferences.Preferences
-import com.alainmk.core.navigation.Route
 import com.alainmk.core.use_case.FilterOutDigits
 import com.alainmk.core.util.UiEvent
 import com.alainmk.core.util.UiText
@@ -46,7 +45,7 @@ class AgeViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveAge(ageNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.HEIGHT))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }

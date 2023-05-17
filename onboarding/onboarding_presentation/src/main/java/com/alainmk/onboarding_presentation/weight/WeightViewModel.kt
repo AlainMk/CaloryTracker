@@ -6,7 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alainmk.core.domain.preferences.Preferences
-import com.alainmk.core.navigation.Route
 import com.alainmk.core.util.UiEvent
 import com.alainmk.core.util.UiText
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -43,7 +42,7 @@ class WeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveWeight(weightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.ACTIVITY))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 }
